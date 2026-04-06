@@ -1,0 +1,355 @@
+{
+	"meta": {
+		"title": "strftime — date format builder",
+		"description": "Interactive strftime cheat sheet and format builder: live preview, plain-language explanations, presets and C / Python / Ruby compatibility."
+	},
+	"header": {
+		"theme": {
+			"label": "Theme",
+			"light": "Light",
+			"dark": "Dark",
+			"system": "System",
+			"shortcut": "Alt+T"
+		},
+		"language": {
+			"label": "Language",
+			"en": "English",
+			"fr": "Français",
+			"shortcut": "Alt+L"
+		}
+	},
+	"hero": {
+		"title": "Build your strftime format",
+		"subtitle": "Click directives, reorder chips, or type freely. Live preview, plain-language explanations, and C / Python / Ruby support at a glance."
+	},
+	"builder": {
+		"label": "Format string",
+		"placeholder": "%Y-%m-%d %H:%M:%S",
+		"copy": "Copy format",
+		"copied": "Format copied to clipboard",
+		"share": "Copy link",
+		"shared": "Shareable link copied",
+		"clear": "Clear",
+		"empty": "Pick a preset, tap directives in the palette, or type a format here.",
+		"invalid": "Unknown directive",
+		"literal": "Text",
+		"addText": "Add text",
+		"dropDuplicate": "Drop to duplicate",
+		"dropDelete": "Drop to delete",
+		"dragHint": "Drag chips to reorder",
+		"srInstructions": "To pick up a chip, press space or enter. Use the arrow keys to move it, space or enter to drop it, and escape to cancel.",
+		"srPickedUp": "{item} picked up",
+		"srOver": "{item} moved over {target}",
+		"srDropped": "{item} dropped on {target}",
+		"srCanceled": "Reordering canceled"
+	},
+	"chip": {
+		"value": "Current value",
+		"padding": "Padding",
+		"paddingDefault": "Default",
+		"paddingNone": "None",
+		"paddingSpace": "Spaces",
+		"paddingZero": "Zeros",
+		"casing": "Case",
+		"casingDefault": "Default",
+		"casingUpper": "Upper",
+		"casingSwap": "Swapped",
+		"width": "Min. width",
+		"remove": "Remove",
+		"range": "Range",
+		"support": "Support",
+		"editText": "Edit text",
+		"drag": "Reorder",
+		"sortable": "sortable chip",
+		"literalNoPercent": "For a literal % sign, use the %% directive instead."
+	},
+	"preview": {
+		"title": "Preview",
+		"live": "Live clock",
+		"pickDate": "Custom date",
+		"backToNow": "Back to now",
+		"locale": "Preview locale",
+		"browserLocale": "Browser default",
+		"cLocale": "C (POSIX)",
+		"copyResult": "Copy result",
+		"copiedResult": "Result copied to clipboard"
+	},
+	"palette": {
+		"title": "Directives",
+		"searchPlaceholder": "Search directives...",
+		"noResults": "No directive matches your search.",
+		"dialect": "Dialect",
+		"all": "All",
+		"add": "Add {code}",
+		"unsupported": "{code} is not available in {dialect}"
+	},
+	"presets": {
+		"title": "Presets",
+		"names": {
+			"iso8601": "ISO 8601",
+			"isoDate": "ISO date",
+			"isoWeekDate": "ISO week date",
+			"rfc2822": "RFC 2822",
+			"log": "Log timestamp",
+			"filename": "File name",
+			"fullText": "Long date",
+			"usDate": "US date",
+			"euDate": "European date",
+			"time24": "24-hour time",
+			"time12": "12-hour time",
+			"epoch": "Unix epoch"
+		}
+	},
+	"reference": {
+		"title": "Reference",
+		"subtitle": "Every directive, its live output for the preview date, and where it works.",
+		"searchPlaceholder": "Filter the reference...",
+		"output": "Output",
+		"copy": "Copy",
+		"copied": "{code} copied",
+		"insert": "Add to format",
+		"modifiers": {
+			"title": "Flags and width",
+			"intro": "Between the % and the letter, glibc and Ruby accept modifiers that tweak padding and case:",
+			"dash": "no padding at all",
+			"underscore": "pad with spaces instead of zeros",
+			"zero": "force zero padding",
+			"caret": "uppercase the result",
+			"hash": "uppercase the name directives (%a %A %b %B %h); lowercase %p and %Z",
+			"widthLabel": "digits",
+			"widthText": "a number sets the minimum field width",
+			"colon": "colons only apply to %z for the +hh:mm offset forms",
+			"python": "Python documents none of these flags: they may happen to work through the platform C library, but they are not portable."
+		},
+		"view": "View",
+		"viewDetailed": "Detailed view",
+		"viewCompact": "Compact view"
+	},
+	"command": {
+		"open": "Search directives",
+		"placeholder": "Type a code, a name or a description...",
+		"empty": "No results.",
+		"hint": "Press Enter to add to the format",
+		"close": "Close"
+	},
+	"categories": {
+		"year": "Years",
+		"month": "Months",
+		"week": "Weeks",
+		"day": "Days",
+		"weekday": "Weekdays",
+		"hour": "Hours",
+		"minute": "Minutes",
+		"second": "Seconds",
+		"timezone": "Time zone",
+		"epoch": "Epoch",
+		"composite": "Shorthands",
+		"literal": "Literals"
+	},
+	"dialects": {
+		"glibc": "C / glibc",
+		"python": "Python",
+		"ruby": "Ruby",
+		"supported": "supported by {dialect}",
+		"unsupported": "not supported by {dialect}"
+	},
+	"footer": {
+		"pitch": "Your perfect strftime format: live explanations, presets and dialects.",
+		"engine": "Everything runs in your browser.",
+		"credit": "Built by <author>Sylvain</author>"
+	},
+	"directives": {
+		"Y": {
+			"description": "Year with century, as a decimal number.",
+			"notes": "The backbone of sortable dates, with %m and %d. For ISO week dates, pair %V with %G instead."
+		},
+		"y": {
+			"description": "Year without century, zero-padded to two digits.",
+			"notes": "Ambiguous by design: 26 could be 1926 or 2026. Prefer %Y anywhere durability matters."
+		},
+		"C": {
+			"description": "Century: the year divided by 100, truncated, zero-padded.",
+			"notes": "Combine with %y to rebuild a full year. Absent from the Python format table."
+		},
+		"G": {
+			"description": "ISO 8601 week-based year.",
+			"notes": "Differs from %Y around January 1st when the ISO week belongs to the neighboring year. Use it with %V and %u, never with %m or %d."
+		},
+		"g": {
+			"description": "ISO week-based year without century, two digits.",
+			"notes": "Two-digit variant of %G. Absent from the Python format table."
+		},
+		"m": {
+			"description": "Month as a zero-padded two-digit number.",
+			"notes": "Use %-m in glibc and Ruby to drop the leading zero."
+		},
+		"B": {
+			"description": "Full month name, according to the locale.",
+			"notes": "Locale-dependent: try switching the preview locale. %^B uppercases the whole name in glibc and Ruby."
+		},
+		"b": {
+			"description": "Abbreviated month name, according to the locale.",
+			"notes": "%h is an exact synonym in glibc and Ruby."
+		},
+		"h": {
+			"description": "Abbreviated month name, synonym of %b.",
+			"notes": "Kept for SUSv2 compatibility; prefer %b. Absent from the Python format table."
+		},
+		"V": {
+			"description": "ISO 8601 week number: week 01 is the one containing the first Thursday of the year.",
+			"notes": "The standard week number in Europe. Pair it with %G instead of %Y to avoid bugs around New Year."
+		},
+		"U": {
+			"description": "Week number, where week 01 starts at the first Sunday of the year.",
+			"notes": "Days before the first Sunday fall in week 00. The American convention."
+		},
+		"W": {
+			"description": "Week number, where week 01 starts at the first Monday of the year.",
+			"notes": "Like %U with Monday weeks: days before the first Monday fall in week 00."
+		},
+		"d": {
+			"description": "Day of the month, zero-padded.",
+			"notes": "Use %e for space padding, or %-d in glibc and Ruby for no padding."
+		},
+		"e": {
+			"description": "Day of the month, space-padded.",
+			"notes": "Single digits render with a leading space, like ' 5'. Absent from the Python format table."
+		},
+		"j": {
+			"description": "Day of the year, zero-padded to three digits.",
+			"notes": "Goes from 001 to 366. Handy for log rotation and julian-style stamps."
+		},
+		"A": {
+			"description": "Full weekday name, according to the locale.",
+			"notes": "Locale-dependent. %^A gives FRIDAY in glibc and Ruby."
+		},
+		"a": {
+			"description": "Abbreviated weekday name, according to the locale.",
+			"notes": "Opens RFC 2822 dates, as in 'Fri, 12 Jun 2026'."
+		},
+		"u": {
+			"description": "Weekday as a number, Monday is 1 (ISO 8601).",
+			"notes": "Runs 1..7 with Sunday as 7. Compare %w, where Sunday is 0."
+		},
+		"w": {
+			"description": "Weekday as a number, Sunday is 0.",
+			"notes": "Runs 0..6. Compare %u, where Monday is 1 and Sunday is 7."
+		},
+		"H": {
+			"description": "Hour on the 24-hour clock, zero-padded.",
+			"notes": "Use %k for space padding in glibc and Ruby."
+		},
+		"I": {
+			"description": "Hour on the 12-hour clock, zero-padded.",
+			"notes": "Always pair it with %p or %P, otherwise 02 could be night or afternoon."
+		},
+		"k": {
+			"description": "Hour on the 24-hour clock, space-padded.",
+			"notes": "GNU extension in C, standard in Ruby, absent from the Python table. ' 8' instead of '08'."
+		},
+		"l": {
+			"description": "Hour on the 12-hour clock, space-padded.",
+			"notes": "GNU extension in C, standard in Ruby, absent from the Python table."
+		},
+		"p": {
+			"description": "Uppercase meridian indicator, AM or PM.",
+			"notes": "Noon is PM, midnight is AM. Locale-dependent, and empty in some locales."
+		},
+		"P": {
+			"description": "Lowercase meridian indicator, am or pm.",
+			"notes": "GNU extension with the case inverted versus %p. Standard in Ruby, absent from Python."
+		},
+		"M": {
+			"description": "Minute, zero-padded.",
+			"notes": "Runs 00..59, the one directive nobody argues about."
+		},
+		"S": {
+			"description": "Second, zero-padded.",
+			"notes": "glibc allows 60 for leap seconds; Python and Ruby stop at 59."
+		},
+		"L": {
+			"description": "Millisecond of the second, three digits.",
+			"notes": "Ruby only. Python uses %f (microseconds); C has no sub-second directive at all."
+		},
+		"N": {
+			"description": "Fractional seconds, where the width picks the precision.",
+			"notes": "Ruby only. %3N is milliseconds, %6N microseconds, %9N nanoseconds (the default)."
+		},
+		"f": {
+			"description": "Microsecond, zero-padded to six digits.",
+			"notes": "Python only, implemented by datetime itself. The Ruby equivalent is %6N."
+		},
+		"z": {
+			"description": "UTC offset, like +0200 or -0500.",
+			"notes": "The RFC 2822 form. For the ISO 8601 colon form, see %:z."
+		},
+		"zColon": {
+			"description": "UTC offset with a colon, like +02:00.",
+			"notes": "The ISO 8601 form. Ruby, and Python since 3.12; glibc does not implement it."
+		},
+		"zColonColon": {
+			"description": "UTC offset with seconds, like +02:00:00.",
+			"notes": "Ruby only."
+		},
+		"Z": {
+			"description": "Time zone name or abbreviation.",
+			"notes": "Output depends on the platform and locale (CEST, GMT+2...). Fine to display, risky to parse."
+		},
+		"s": {
+			"description": "Seconds since the Unix epoch, 1970-01-01 00:00:00 UTC.",
+			"notes": "The universal machine timestamp. In Python, use timestamp() instead."
+		},
+		"F": {
+			"description": "ISO 8601 date, shorthand for %Y-%m-%d.",
+			"notes": "The sortable date. Absent from the Python format table."
+		},
+		"D": {
+			"description": "US date, shorthand for %m/%d/%y.",
+			"notes": "Ambiguous outside the US: 06/12 reads as December 6th in most of the world. Prefer %F."
+		},
+		"T": {
+			"description": "24-hour time with seconds, shorthand for %H:%M:%S.",
+			"notes": "Same output as %X in the C locale."
+		},
+		"R": {
+			"description": "24-hour time without seconds, shorthand for %H:%M.",
+			"notes": "The wall-clock format."
+		},
+		"r": {
+			"description": "12-hour clock time, shorthand for %I:%M:%S %p.",
+			"notes": "Locale-dependent in glibc; some locales render it empty."
+		},
+		"c": {
+			"description": "The locale's full date and time representation.",
+			"notes": "In the C locale: %a %b %e %H:%M:%S %Y. Try switching the preview locale to see it change."
+		},
+		"x": {
+			"description": "The locale's date representation, without the time.",
+			"notes": "In the C locale: %m/%d/%y."
+		},
+		"X": {
+			"description": "The locale's time representation, without the date.",
+			"notes": "In the C locale: %H:%M:%S."
+		},
+		"v": {
+			"description": "VMS date, shorthand for %e-%^b-%Y.",
+			"notes": "Ruby only. Renders like 12-JUN-2026."
+		},
+		"plus": {
+			"description": "date(1) style timestamp, shorthand for %a %b %e %H:%M:%S %Z %Y.",
+			"notes": "Ruby only, mirroring the BSD date command output. Supported by Date#strftime and DateTime#strftime, but not Time#strftime."
+		},
+		"n": {
+			"description": "A literal newline character.",
+			"notes": "Absent from the Python format table; type a real newline there instead."
+		},
+		"t": {
+			"description": "A literal tab character.",
+			"notes": "Absent from the Python format table."
+		},
+		"percent": {
+			"description": "A literal percent sign.",
+			"notes": "The only way to output % itself."
+		}
+	}
+}

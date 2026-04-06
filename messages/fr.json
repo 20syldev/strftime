@@ -1,0 +1,355 @@
+{
+	"meta": {
+		"title": "strftime — constructeur de formats de date",
+		"description": "Aide-mémoire strftime interactif : aperçu en direct, explications claires, presets et compatibilité C / Python / Ruby."
+	},
+	"header": {
+		"theme": {
+			"label": "Thème",
+			"light": "Clair",
+			"dark": "Sombre",
+			"system": "Système",
+			"shortcut": "Alt+T"
+		},
+		"language": {
+			"label": "Langue",
+			"en": "English",
+			"fr": "Français",
+			"shortcut": "Alt+L"
+		}
+	},
+	"hero": {
+		"title": "Composez votre format strftime",
+		"subtitle": "Cliquez des directives, réordonnez les pièces ou tapez librement. Aperçu en direct, explications en clair et compatibilité C / Python / Ruby d'un coup d'oeil."
+	},
+	"builder": {
+		"label": "Chaîne de format",
+		"placeholder": "%Y-%m-%d %H:%M:%S",
+		"copy": "Copier le format",
+		"copied": "Format copié dans le presse-papiers",
+		"share": "Copier le lien",
+		"shared": "Lien partageable copié",
+		"clear": "Tout effacer",
+		"empty": "Choisissez un preset, touchez des directives dans la palette ou tapez un format ici.",
+		"invalid": "Directive inconnue",
+		"literal": "Texte",
+		"addText": "Ajouter du texte",
+		"dropDuplicate": "Déposez pour dupliquer",
+		"dropDelete": "Déposez pour supprimer",
+		"dragHint": "Glissez les pièces pour réordonner",
+		"srInstructions": "Pour saisir une pièce, appuyez sur espace ou entrée. Déplacez-la avec les flèches, déposez-la avec espace ou entrée, annulez avec échap.",
+		"srPickedUp": "{item} saisi",
+		"srOver": "{item} déplacé sur {target}",
+		"srDropped": "{item} déposé sur {target}",
+		"srCanceled": "Réorganisation annulée"
+	},
+	"chip": {
+		"value": "Valeur actuelle",
+		"padding": "Remplissage",
+		"paddingDefault": "Par défaut",
+		"paddingNone": "Aucun",
+		"paddingSpace": "Espaces",
+		"paddingZero": "Zéros",
+		"casing": "Casse",
+		"casingDefault": "Par défaut",
+		"casingUpper": "Majuscules",
+		"casingSwap": "Inversée",
+		"width": "Largeur min.",
+		"remove": "Retirer",
+		"range": "Plage",
+		"support": "Compatibilité",
+		"editText": "Modifier le texte",
+		"drag": "Réorganiser",
+		"sortable": "pièce réorganisable",
+		"literalNoPercent": "Pour un signe % littéral, utilisez plutôt la directive %%."
+	},
+	"preview": {
+		"title": "Aperçu",
+		"live": "Horloge en direct",
+		"pickDate": "Date personnalisée",
+		"backToNow": "Revenir à maintenant",
+		"locale": "Locale de rendu",
+		"browserLocale": "Navigateur",
+		"cLocale": "C (POSIX)",
+		"copyResult": "Copier le résultat",
+		"copiedResult": "Résultat copié dans le presse-papiers"
+	},
+	"palette": {
+		"title": "Directives",
+		"searchPlaceholder": "Rechercher une directive...",
+		"noResults": "Aucune directive ne correspond.",
+		"dialect": "Dialecte",
+		"all": "Tous",
+		"add": "Ajouter {code}",
+		"unsupported": "{code} n'existe pas en {dialect}"
+	},
+	"presets": {
+		"title": "Presets",
+		"names": {
+			"iso8601": "ISO 8601",
+			"isoDate": "Date ISO",
+			"isoWeekDate": "Semaine ISO",
+			"rfc2822": "RFC 2822",
+			"log": "Horodatage de log",
+			"filename": "Nom de fichier",
+			"fullText": "Date longue",
+			"usDate": "Date américaine",
+			"euDate": "Date européenne",
+			"time24": "Heure 24 h",
+			"time12": "Heure 12 h",
+			"epoch": "Epoch Unix"
+		}
+	},
+	"reference": {
+		"title": "Référence",
+		"subtitle": "Chaque directive, sa sortie en direct pour la date d'aperçu, et où elle fonctionne.",
+		"searchPlaceholder": "Filtrer la référence...",
+		"output": "Sortie",
+		"copy": "Copier",
+		"copied": "{code} copié",
+		"insert": "Ajouter au format",
+		"modifiers": {
+			"title": "Drapeaux et largeur",
+			"intro": "Entre le % et la lettre, glibc et Ruby acceptent des modificateurs qui ajustent remplissage et casse :",
+			"dash": "aucun remplissage",
+			"underscore": "remplir avec des espaces plutôt que des zéros",
+			"zero": "forcer les zéros",
+			"caret": "résultat en majuscules",
+			"hash": "majuscules pour les directives de noms (%a %A %b %B %h) ; minuscules pour %p et %Z",
+			"widthLabel": "chiffres",
+			"widthText": "un nombre fixe la largeur minimale du champ",
+			"colon": "les deux-points ne s'appliquent qu'à %z, pour les formes +hh:mm",
+			"python": "Python ne documente aucun de ces drapeaux : ils peuvent fonctionner via la bibliothèque C de la plateforme, mais ils ne sont pas portables."
+		},
+		"view": "Affichage",
+		"viewDetailed": "Vue détaillée",
+		"viewCompact": "Vue compacte"
+	},
+	"command": {
+		"open": "Rechercher des directives",
+		"placeholder": "Tapez un code, un nom ou une description...",
+		"empty": "Aucun résultat.",
+		"hint": "Entrée pour ajouter au format",
+		"close": "Fermer"
+	},
+	"categories": {
+		"year": "Années",
+		"month": "Mois",
+		"week": "Semaines",
+		"day": "Jours",
+		"weekday": "Jours de semaine",
+		"hour": "Heures",
+		"minute": "Minutes",
+		"second": "Secondes",
+		"timezone": "Fuseau horaire",
+		"epoch": "Epoch",
+		"composite": "Raccourcis",
+		"literal": "Littéraux"
+	},
+	"dialects": {
+		"glibc": "C / glibc",
+		"python": "Python",
+		"ruby": "Ruby",
+		"supported": "pris en charge par {dialect}",
+		"unsupported": "non pris en charge par {dialect}"
+	},
+	"footer": {
+		"pitch": "Le format strftime parfait : explications en direct, presets et dialectes.",
+		"engine": "Tout tourne dans votre navigateur.",
+		"credit": "Conçu par <author>Sylvain</author>"
+	},
+	"directives": {
+		"Y": {
+			"description": "Année avec le siècle, en nombre décimal.",
+			"notes": "La colonne vertébrale des dates triables, avec %m et %d. Pour les semaines ISO, associez plutôt %V à %G."
+		},
+		"y": {
+			"description": "Année sans le siècle, sur deux chiffres.",
+			"notes": "Ambiguë par construction : 26 peut être 1926 ou 2026. Préférez %Y dès que la durabilité compte."
+		},
+		"C": {
+			"description": "Siècle : l'année divisée par 100, tronquée, sur deux chiffres.",
+			"notes": "Combinez avec %y pour reconstituer une année complète. Absent de la table Python."
+		},
+		"G": {
+			"description": "Année ISO 8601 basée sur les semaines.",
+			"notes": "Diffère de %Y autour du 1er janvier quand la semaine ISO appartient à l'année voisine. À utiliser avec %V et %u, jamais avec %m ou %d."
+		},
+		"g": {
+			"description": "Année ISO basée sur les semaines, sans le siècle.",
+			"notes": "Variante sur deux chiffres de %G. Absent de la table Python."
+		},
+		"m": {
+			"description": "Mois en nombre sur deux chiffres.",
+			"notes": "Utilisez %-m en glibc et Ruby pour supprimer le zéro de tête."
+		},
+		"B": {
+			"description": "Nom complet du mois, selon la locale.",
+			"notes": "Dépend de la locale : essayez de changer la locale de rendu. %^B met tout le nom en majuscules en glibc et Ruby."
+		},
+		"b": {
+			"description": "Nom abrégé du mois, selon la locale.",
+			"notes": "%h est un synonyme exact en glibc et Ruby."
+		},
+		"h": {
+			"description": "Nom abrégé du mois, synonyme de %b.",
+			"notes": "Conservé pour la compatibilité SUSv2 ; préférez %b. Absent de la table Python."
+		},
+		"V": {
+			"description": "Numéro de semaine ISO 8601 : la semaine 01 contient le premier jeudi de l'année.",
+			"notes": "Le numéro de semaine standard en Europe. Associez-le à %G plutôt qu'à %Y pour éviter les bugs au Nouvel An."
+		},
+		"U": {
+			"description": "Numéro de semaine, la semaine 01 démarrant au premier dimanche de l'année.",
+			"notes": "Les jours avant le premier dimanche tombent en semaine 00. La convention américaine."
+		},
+		"W": {
+			"description": "Numéro de semaine, la semaine 01 démarrant au premier lundi de l'année.",
+			"notes": "Comme %U avec des semaines au lundi : les jours avant le premier lundi tombent en semaine 00."
+		},
+		"d": {
+			"description": "Jour du mois, complété par des zéros.",
+			"notes": "Utilisez %e pour un remplissage par espaces, ou %-d en glibc et Ruby pour aucun remplissage."
+		},
+		"e": {
+			"description": "Jour du mois, complété par des espaces.",
+			"notes": "Les jours à un chiffre sortent avec une espace de tête, comme ' 5'. Absent de la table Python."
+		},
+		"j": {
+			"description": "Jour de l'année, sur trois chiffres.",
+			"notes": "Va de 001 à 366. Pratique pour la rotation de logs et les horodatages juliens."
+		},
+		"A": {
+			"description": "Nom complet du jour de la semaine, selon la locale.",
+			"notes": "Dépend de la locale. %^A donne VENDREDI en glibc et Ruby."
+		},
+		"a": {
+			"description": "Nom abrégé du jour de la semaine, selon la locale.",
+			"notes": "Ouvre les dates RFC 2822, comme dans 'Fri, 12 Jun 2026'."
+		},
+		"u": {
+			"description": "Jour de la semaine en chiffre, lundi vaut 1 (ISO 8601).",
+			"notes": "Va de 1 à 7, dimanche valant 7. Comparez %w, où dimanche vaut 0."
+		},
+		"w": {
+			"description": "Jour de la semaine en chiffre, dimanche vaut 0.",
+			"notes": "Va de 0 à 6. Comparez %u, où lundi vaut 1 et dimanche 7."
+		},
+		"H": {
+			"description": "Heure sur 24 heures, complétée par des zéros.",
+			"notes": "Utilisez %k pour un remplissage par espaces en glibc et Ruby."
+		},
+		"I": {
+			"description": "Heure sur 12 heures, complétée par des zéros.",
+			"notes": "Associez-la toujours à %p ou %P, sinon 02 peut être la nuit ou l'après-midi."
+		},
+		"k": {
+			"description": "Heure sur 24 heures, complétée par des espaces.",
+			"notes": "Extension GNU en C, standard en Ruby, absente de la table Python. ' 8' au lieu de '08'."
+		},
+		"l": {
+			"description": "Heure sur 12 heures, complétée par des espaces.",
+			"notes": "Extension GNU en C, standard en Ruby, absente de la table Python."
+		},
+		"p": {
+			"description": "Indicateur de méridien en majuscules, AM ou PM.",
+			"notes": "Midi est PM, minuit est AM. Dépend de la locale, et vide dans certaines."
+		},
+		"P": {
+			"description": "Indicateur de méridien en minuscules, am ou pm.",
+			"notes": "Extension GNU à la casse inversée par rapport à %p. Standard en Ruby, absente de Python."
+		},
+		"M": {
+			"description": "Minute, complétée par des zéros.",
+			"notes": "Va de 00 à 59, la seule directive qui ne fait débat nulle part."
+		},
+		"S": {
+			"description": "Seconde, complétée par des zéros.",
+			"notes": "glibc autorise 60 pour les secondes intercalaires ; Python et Ruby s'arrêtent à 59."
+		},
+		"L": {
+			"description": "Milliseconde de la seconde, sur trois chiffres.",
+			"notes": "Ruby uniquement. Python utilise %f (microsecondes) ; le C n'a aucune directive infra-seconde."
+		},
+		"N": {
+			"description": "Fractions de seconde, la largeur choisissant la précision.",
+			"notes": "Ruby uniquement. %3N donne les millisecondes, %6N les microsecondes, %9N les nanosecondes (défaut)."
+		},
+		"f": {
+			"description": "Microseconde, sur six chiffres.",
+			"notes": "Python uniquement, implémentée par datetime. L'équivalent Ruby est %6N."
+		},
+		"z": {
+			"description": "Décalage UTC, comme +0200 ou -0500.",
+			"notes": "La forme RFC 2822. Pour la forme ISO 8601 avec deux-points, voyez %:z."
+		},
+		"zColon": {
+			"description": "Décalage UTC avec deux-points, comme +02:00.",
+			"notes": "La forme ISO 8601. Ruby, et Python depuis 3.12 ; glibc ne l'implémente pas."
+		},
+		"zColonColon": {
+			"description": "Décalage UTC avec les secondes, comme +02:00:00.",
+			"notes": "Ruby uniquement."
+		},
+		"Z": {
+			"description": "Nom ou abréviation du fuseau horaire.",
+			"notes": "La sortie dépend de la plateforme et de la locale (CEST, GMT+2...). Bien pour afficher, risqué à parser."
+		},
+		"s": {
+			"description": "Secondes écoulées depuis l'epoch Unix, le 1970-01-01 00:00:00 UTC.",
+			"notes": "L'horodatage machine universel. En Python, utilisez plutôt timestamp()."
+		},
+		"F": {
+			"description": "Date ISO 8601, raccourci de %Y-%m-%d.",
+			"notes": "La date triable. Absente de la table Python."
+		},
+		"D": {
+			"description": "Date américaine, raccourci de %m/%d/%y.",
+			"notes": "Ambiguë hors des États-Unis : 06/12 se lit 6 décembre presque partout ailleurs. Préférez %F."
+		},
+		"T": {
+			"description": "Heure sur 24 heures avec secondes, raccourci de %H:%M:%S.",
+			"notes": "Même sortie que %X dans la locale C."
+		},
+		"R": {
+			"description": "Heure sur 24 heures sans secondes, raccourci de %H:%M.",
+			"notes": "Le format des horloges murales."
+		},
+		"r": {
+			"description": "Heure sur 12 heures, raccourci de %I:%M:%S %p.",
+			"notes": "Dépend de la locale en glibc ; certaines locales la rendent vide."
+		},
+		"c": {
+			"description": "La représentation complète de la date et de l'heure selon la locale.",
+			"notes": "Dans la locale C : %a %b %e %H:%M:%S %Y. Changez la locale de rendu pour la voir évoluer."
+		},
+		"x": {
+			"description": "La représentation de la date selon la locale, sans l'heure.",
+			"notes": "Dans la locale C : %m/%d/%y."
+		},
+		"X": {
+			"description": "La représentation de l'heure selon la locale, sans la date.",
+			"notes": "Dans la locale C : %H:%M:%S."
+		},
+		"v": {
+			"description": "Date VMS, raccourci de %e-%^b-%Y.",
+			"notes": "Ruby uniquement. Sort comme 12-JUN-2026."
+		},
+		"plus": {
+			"description": "Horodatage façon date(1), raccourci de %a %b %e %H:%M:%S %Z %Y.",
+			"notes": "Ruby uniquement, calqué sur la sortie de la commande date de BSD. Pris en charge par Date#strftime et DateTime#strftime, mais pas par Time#strftime."
+		},
+		"n": {
+			"description": "Un caractère de nouvelle ligne littéral.",
+			"notes": "Absent de la table Python ; tapez-y une vraie nouvelle ligne à la place."
+		},
+		"t": {
+			"description": "Un caractère de tabulation littéral.",
+			"notes": "Absent de la table Python."
+		},
+		"percent": {
+			"description": "Un signe pourcent littéral.",
+			"notes": "La seule façon de sortir % lui-même."
+		}
+	}
+}
