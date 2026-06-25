@@ -1,0 +1,217 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Neo-brutalist design tokens: hard offset shadows, thick borders, vivid
+ * sticker swatches. Components only ever consume semantic tokens, so a theme
+ * change never requires touching a component. In dark mode the borders go
+ * mid-gray instead of near-white so the structure recedes behind the content,
+ * mirroring what near-black borders do on the light cream background.
+ */
+
+:root {
+	--background: oklch(0.965 0.02 95);
+	--foreground: oklch(0.16 0.01 280);
+	--card: oklch(1 0 0);
+	--card-foreground: oklch(0.16 0.01 280);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.16 0.01 280);
+	--primary: oklch(0.86 0.18 95);
+	--primary-foreground: oklch(0.16 0.01 280);
+	--secondary: oklch(0.83 0.1 300);
+	--secondary-foreground: oklch(0.16 0.01 280);
+	--muted: oklch(0.92 0.02 95);
+	--muted-foreground: oklch(0.45 0.02 280);
+	--accent: oklch(0.9 0.08 150);
+	--accent-foreground: oklch(0.16 0.01 280);
+	--destructive: oklch(0.55 0.22 27);
+	--destructive-foreground: oklch(0.99 0 0);
+	--border: oklch(0.16 0.01 280);
+	--input: oklch(0.16 0.01 280);
+	--ring: oklch(0.55 0.22 290);
+	--radius: 0.4rem;
+
+	/* Interaction grammar: resting / hover / pressed surfaces */
+	--shadow-raised-sm: 2px 2px 0 0 var(--border);
+	--shadow-raised: 4px 4px 0 0 var(--border);
+	--shadow-raised-lg: 7px 7px 0 0 var(--border);
+	--shadow-pressed: 0 0 0 0 transparent;
+	--press-x: 2px;
+	--press-y: 2px;
+
+	/* Decorative swatch palette, mapped to directive categories in data */
+	--swatch-1: oklch(0.86 0.18 95);
+	--swatch-2: oklch(0.74 0.16 305);
+	--swatch-3: oklch(0.8 0.16 150);
+	--swatch-4: oklch(0.78 0.13 350);
+	--swatch-5: oklch(0.78 0.12 230);
+	--swatch-6: oklch(0.8 0.14 55);
+	--swatch-foreground: oklch(0.16 0.01 280);
+}
+
+.dark {
+	--background: oklch(0.17 0.02 280);
+	--foreground: oklch(0.93 0.01 90);
+	--card: oklch(0.22 0.02 280);
+	--card-foreground: oklch(0.93 0.01 90);
+	--popover: oklch(0.22 0.02 280);
+	--popover-foreground: oklch(0.93 0.01 90);
+	--primary: oklch(0.86 0.18 95);
+	--primary-foreground: oklch(0.16 0.01 280);
+	--secondary: oklch(0.35 0.08 300);
+	--secondary-foreground: oklch(0.93 0.01 90);
+	--muted: oklch(0.26 0.02 280);
+	--muted-foreground: oklch(0.68 0.02 280);
+	--accent: oklch(0.32 0.06 150);
+	--accent-foreground: oklch(0.93 0.01 90);
+	--destructive: oklch(0.58 0.22 27);
+	--destructive-foreground: oklch(0.99 0 0);
+	/* Mid-gray structure so the content, not the borders, draws the eye */
+	--border: oklch(0.55 0.02 280);
+	--input: oklch(0.55 0.02 280);
+	--ring: oklch(0.7 0.15 290);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+
+	--color-swatch-1: var(--swatch-1);
+	--color-swatch-2: var(--swatch-2);
+	--color-swatch-3: var(--swatch-3);
+	--color-swatch-4: var(--swatch-4);
+	--color-swatch-5: var(--swatch-5);
+	--color-swatch-6: var(--swatch-6);
+	--color-swatch-foreground: var(--swatch-foreground);
+
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
+	/* Remap the default shadow scale so generated shadcn components follow the theme */
+	--shadow-2xs: var(--shadow-raised-sm);
+	--shadow-xs: var(--shadow-raised-sm);
+	--shadow-sm: var(--shadow-raised-sm);
+	--shadow: var(--shadow-raised);
+	--shadow-md: var(--shadow-raised);
+	--shadow-lg: var(--shadow-raised-lg);
+	--shadow-xl: var(--shadow-raised-lg);
+	--shadow-raised-sm: var(--shadow-raised-sm);
+	--shadow-raised: var(--shadow-raised);
+	--shadow-raised-lg: var(--shadow-raised-lg);
+	--shadow-pressed: var(--shadow-pressed);
+
+	--font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+	--font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+	/* Arcade-style hard blink used by the route loader */
+	--animate-blink: blink 0.9s steps(2, jump-none) infinite;
+
+	@keyframes blink {
+		0%,
+		100% {
+			opacity: 0.15;
+		}
+		50% {
+			opacity: 1;
+		}
+	}
+
+	/* Snappy entrance for a freshly added or duplicated chip: a quick overshoot
+	   then settle, so a new chip confirms itself instead of silently appearing */
+	--animate-pop: pop 0.18s ease-out;
+
+	@keyframes pop {
+		0% {
+			transform: scale(0.85);
+		}
+		60% {
+			transform: scale(1.06);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	/* Wiggle the hovered chip during a drag to signal where the piece will land */
+	--animate-wiggle: wiggle 0.18s ease-in-out infinite;
+
+	@keyframes wiggle {
+		0%,
+		100% {
+			transform: rotate(-2.5deg);
+		}
+		50% {
+			transform: rotate(2.5deg);
+		}
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+
+	body {
+		@apply bg-background font-sans text-foreground antialiased;
+	}
+
+	::selection {
+		@apply bg-primary text-primary-foreground;
+	}
+
+	/* Scrollbars are the one deliberate exception to the brutalist styling:
+       thin, rounded and discreet so they never compete with the content.
+       Chromium ignores scrollbar-color when the webkit pseudo-elements are
+       styled, so the fallback only targets Firefox */
+	@supports not selector(::-webkit-scrollbar) {
+		html {
+			scrollbar-width: thin;
+			scrollbar-color: var(--muted-foreground) transparent;
+		}
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--muted-foreground);
+		background-clip: padding-box;
+		border: 2px solid transparent;
+		border-radius: 9999px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: var(--foreground);
+	}
+
+	::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+}
