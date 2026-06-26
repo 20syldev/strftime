@@ -13,8 +13,6 @@
 		},
 		"language": {
 			"label": "Language",
-			"en": "English",
-			"fr": "Français",
 			"shortcut": "Alt+L"
 		}
 	},
