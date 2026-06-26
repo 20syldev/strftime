@@ -158,6 +158,11 @@
 		"engine": "Tout tourne dans votre navigateur.",
 		"credit": "Conçu par <author>Sylvain</author>"
 	},
+	"notFound": {
+		"title": "Directive inconnue",
+		"description": "Cette page ne fait partie d'aucun format. Retournons au constructeur.",
+		"back": "Retour au constructeur"
+	},
 	"directives": {
 		"Y": {
 			"description": "Année avec le siècle, en nombre décimal.",

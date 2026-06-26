@@ -158,6 +158,11 @@
 		"engine": "Everything runs in your browser.",
 		"credit": "Built by <author>Sylvain</author>"
 	},
+	"notFound": {
+		"title": "Unknown directive",
+		"description": "This page isn't part of any format string. Let's head back to the builder.",
+		"back": "Back to the builder"
+	},
 	"directives": {
 		"Y": {
 			"description": "Year with century, as a decimal number.",
