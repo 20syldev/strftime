@@ -34,10 +34,7 @@ interface TouchBinding {
 
 const TooltipTouchContext = React.createContext<TouchBinding | null>(null);
 
-function compose<E>(
-	a: ((event: E) => void) | undefined,
-	b: ((event: E) => void) | undefined,
-) {
+function compose<E>(a: ((event: E) => void) | undefined, b: ((event: E) => void) | undefined) {
 	return (event: E) => {
 		a?.(event);
 		b?.(event);
@@ -187,10 +184,7 @@ function TooltipTrigger({
 	return (
 		<TooltipPrimitive.Trigger
 			data-slot="tooltip-trigger"
-			className={cn(
-				"touch-manipulation select-none [-webkit-touch-callout:none]",
-				className,
-			)}
+			className={cn("touch-manipulation select-none [-webkit-touch-callout:none]", className)}
 			onPointerDown={compose(touch?.onPointerDown, onPointerDown)}
 			onPointerMove={compose(touch?.onPointerMove, onPointerMove)}
 			onPointerUp={compose(touch?.onPointerUp, onPointerUp)}

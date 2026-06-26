@@ -48,9 +48,7 @@ function FlagToggle({ value, label }: { value: string; label: string }) {
 		<ToggleGroupItem value={value}>
 			<Tooltip>
 				<TooltipTrigger asChild>
-					<span className="flex h-full w-full items-center justify-center">
-						{label}
-					</span>
+					<span className="flex h-full w-full items-center justify-center">{label}</span>
 				</TooltipTrigger>
 				<TooltipContent className="font-mono">{value}</TooltipContent>
 			</Tooltip>
