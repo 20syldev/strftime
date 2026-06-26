@@ -4,6 +4,7 @@ import { Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { LocaleSwitcher } from "@/components/locale";
+import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/theme";
 import { Button } from "@/components/ui/button";
 
@@ -22,13 +23,8 @@ export function Header({ onSearchOpen }: HeaderProps) {
 	return (
 		<header className="sticky top-0 z-40 border-b-2 bg-background/90 backdrop-blur">
 			<div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-2 px-4">
-				<div className="flex items-center gap-3">
-					<span
-						aria-hidden="true"
-						className="grid size-8 -rotate-3 place-items-center rounded-md border-2 bg-primary font-mono text-lg font-black text-primary-foreground shadow-raised-sm"
-					>
-						%
-					</span>
+				<div className="flex items-center gap-2">
+					<Logo />
 					<span className="text-lg font-black tracking-tight">strftime</span>
 				</div>
 				<div className="flex items-center gap-2">
