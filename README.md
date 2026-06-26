@@ -18,13 +18,13 @@ Next.js 16 (App Router, static export), React 19, strict TypeScript, Tailwind CS
 
 ## Scripts
 
-| Script           | Description                                  |
-| ---------------- | -------------------------------------------- |
-| `npm run dev`    | Dev server on `127.0.0.1:5642`               |
-| `npm run build`  | Production build (static export to `out/`)   |
-| `npm run start`  | Serve `out/` on port 5643                    |
-| `npm run check`  | `tsc --noEmit` + ESLint + Prettier (check)   |
-| `npm run format` | Prettier + ESLint (write)                    |
+| Script           | Description                                |
+| ---------------- | ------------------------------------------ |
+| `npm run dev`    | Dev server on `127.0.0.1:5642`             |
+| `npm run build`  | Production build (static export to `out/`) |
+| `npm run start`  | Serve `out/` on port 5643                  |
+| `npm run check`  | `tsc --noEmit` + ESLint + Prettier (check) |
+| `npm run format` | Prettier + ESLint (write)                  |
 
 ## Structure
 
