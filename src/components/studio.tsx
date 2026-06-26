@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Builder } from "@/components/builder";
 import { CommandMenu } from "@/components/command";
@@ -25,13 +25,19 @@ const DEFAULT_FORMAT = "%Y-%m-%d %H:%M:%S";
 export function Studio() {
 	const t = useTranslations("hero");
 
-	const [format, setFormat] = useState(DEFAULT_FORMAT);
+	// Seed from ?f= on the client; the server has no URL and uses the default,
+	// which is safe because the booting gate renders no format-dependent markup
+	// on the first paint, so there is nothing to mismatch on hydration.
+	const [format, setFormat] = useState(() =>
+		typeof window === "undefined"
+			? DEFAULT_FORMAT
+			: (new URLSearchParams(window.location.search).get("f") ?? DEFAULT_FORMAT),
+	);
 	const [customDate, setCustomDate] = useState<Date | null>(null);
 	const [previewLocale, setPreviewLocale] = useState("browser");
 	const [dialect, setDialect] = useState<Dialect | "all">("all");
 	const [searchOpen, setSearchOpen] = useState(false);
 	const [uiPaused, setUiPaused] = useState(false);
-	const seeded = useRef(false);
 
 	const now = useNow(1000, customDate === null && !uiPaused);
 	const date = customDate ?? now;
@@ -51,17 +57,8 @@ export function Studio() {
 				: navigator.language
 			: previewLocale;
 
-	// Seed the format from ?f= on first run, then mirror changes back to the URL
+	// Mirror the format back to the URL whenever it changes
 	useEffect(() => {
-		if (!seeded.current) {
-			seeded.current = true;
-			const param = new URLSearchParams(window.location.search).get("f");
-			if (param !== null && param !== format) {
-				// eslint-disable-next-line react-hooks/set-state-in-effect -- one-time seed from an external system (the URL), unavailable during SSR
-				setFormat(param);
-				return;
-			}
-		}
 		const url = new URL(window.location.href);
 		if (format && format !== DEFAULT_FORMAT) {
 			url.searchParams.set("f", format);
