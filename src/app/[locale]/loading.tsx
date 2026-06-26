@@ -1,7 +1,7 @@
 import { ArcadeLoader } from "@/components/loader";
 
 /**
- * Route-level loading UI for the French locale.
+ * Route-level loading UI for the non-default locales.
  * Rendered by the App Router while the segment's bundle and data resolve.
  */
 export default function Loading() {
