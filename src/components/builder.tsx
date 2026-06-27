@@ -25,6 +25,7 @@ import { type ReactNode, useMemo, useState } from "react";
 import { toast } from "sonner";
 
 import { DROP_COPY, DROP_TRASH, OverlayChip, SortableChip } from "@/components/chip";
+import { CodeExport } from "@/components/codegen";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -281,6 +282,7 @@ export function Builder({ format, onFormatChange, date, locale, dialect }: Build
 								</Tooltip>
 							);
 						})}
+						<CodeExport format={format} />
 					</div>
 				</div>
 				<Input
