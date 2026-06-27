@@ -54,6 +54,21 @@
 			"unmapped": "Sin equivalente directo para {codes}: se deja igual, ajústalo manualmente."
 		}
 	},
+	"portability": {
+		"title": "Portabilidad",
+		"portable": "Portable en {dialect}",
+		"reasons": {
+			"conversion": "no disponible en este dialecto",
+			"flag": "indicador no admitido",
+			"width": "ancho no admitido",
+			"modifier": "modificador E/O no admitido"
+		},
+		"chip": {
+			"flag": "El indicador de {code} no se admite en {dialect}",
+			"width": "El ancho de {code} no se admite en {dialect}",
+			"modifier": "El modificador E/O de {code} no se admite en {dialect}"
+		}
+	},
 	"chip": {
 		"value": "Valor actual",
 		"padding": "Relleno",

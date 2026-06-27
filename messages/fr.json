@@ -54,6 +54,21 @@
 			"unmapped": "Pas d'équivalent direct pour {codes} — laissé tel quel, à ajuster manuellement."
 		}
 	},
+	"portability": {
+		"title": "Portabilité",
+		"portable": "Portable en {dialect}",
+		"reasons": {
+			"conversion": "indisponible dans ce dialecte",
+			"flag": "drapeau non pris en charge",
+			"width": "largeur non prise en charge",
+			"modifier": "modificateur E/O non pris en charge"
+		},
+		"chip": {
+			"flag": "Le drapeau de {code} n'est pas pris en charge en {dialect}",
+			"width": "La largeur de {code} n'est pas prise en charge en {dialect}",
+			"modifier": "Le modificateur E/O de {code} n'est pas pris en charge en {dialect}"
+		}
+	},
 	"chip": {
 		"value": "Valeur actuelle",
 		"padding": "Remplissage",

@@ -54,6 +54,21 @@
 			"unmapped": "No direct equivalent for {codes} — left in place, adjust manually."
 		}
 	},
+	"portability": {
+		"title": "Portability",
+		"portable": "Portable in {dialect}",
+		"reasons": {
+			"conversion": "not available in this dialect",
+			"flag": "flag not supported",
+			"width": "width not supported",
+			"modifier": "E/O modifier not supported"
+		},
+		"chip": {
+			"flag": "The {code} flag is not supported in {dialect}",
+			"width": "The width on {code} is not supported in {dialect}",
+			"modifier": "The E/O modifier on {code} is not supported in {dialect}"
+		}
+	},
 	"chip": {
 		"value": "Current value",
 		"padding": "Padding",
