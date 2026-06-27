@@ -15,6 +15,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { CATEGORY_SWATCH, type Dialect, findDirective } from "@/data/directives";
+import { analyzeToken } from "@/lib/portability";
 import {
 	buildDirective,
 	type CaseFlag,
@@ -125,9 +126,11 @@ function DirectiveChip({ token, value, dialect, onChange, onRemove }: DirectiveC
 	const tCat = useTranslations("categories");
 	const tPalette = useTranslations("palette");
 	const tDialects = useTranslations("dialects");
+	const tPortability = useTranslations("portability");
 
 	const directive = findDirective(token.conversion, token.colons);
-	const unsupported = dialect !== "all" && directive ? !directive[dialect] : false;
+	const selectedIssue = dialect !== "all" ? analyzeToken(token)[dialect] : null;
+	const unsupported = selectedIssue ? !selectedIssue.ok : false;
 
 	const update = (patch: Partial<DirectiveToken>) =>
 		onChange(buildDirective({ ...token, ...patch }));
@@ -173,13 +176,18 @@ function DirectiveChip({ token, value, dialect, onChange, onRemove }: DirectiveC
 							<span className="text-muted-foreground">{t("support")}</span>
 							<DialectSupport directive={directive} />
 						</div>
-						{unsupported && dialect !== "all" && (
+						{unsupported && selectedIssue && dialect !== "all" && (
 							<p className="flex w-0 min-w-full items-center gap-1.5 text-xs font-bold text-destructive">
 								<TriangleAlert aria-hidden="true" className="size-3.5" />
-								{tPalette("unsupported", {
-									code: directive.code,
-									dialect: tDialects(dialect),
-								})}
+								{selectedIssue.reason === "conversion"
+									? tPalette("unsupported", {
+											code: directive.code,
+											dialect: tDialects(dialect),
+										})
+									: tPortability(`chip.${selectedIssue.reason}`, {
+											code: token.raw,
+											dialect: tDialects(dialect),
+										})}
 							</p>
 						)}
 						<div className="flex flex-col gap-2">
@@ -355,10 +363,9 @@ interface FaceProps {
 
 function ChipFace({ token, value, dialect }: FaceProps) {
 	const tBuilder = useTranslations("builder");
-	const directive =
-		token.kind === "directive" ? findDirective(token.conversion, token.colons) : undefined;
-	const unsupported =
-		token.kind === "directive" && dialect !== "all" && directive ? !directive[dialect] : false;
+	const selectedIssue =
+		token.kind === "directive" && dialect !== "all" ? analyzeToken(token)[dialect] : null;
+	const unsupported = selectedIssue ? !selectedIssue.ok : false;
 
 	return (
 		<span className={cn(CHIP_FRAME_BASE, frameClass(token), "cursor-grabbing")}>

@@ -26,6 +26,7 @@ import { toast } from "sonner";
 
 import { DROP_COPY, DROP_TRASH, OverlayChip, SortableChip } from "@/components/chip";
 import { CodeExport } from "@/components/codegen";
+import { PortabilityBar } from "@/components/portability";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -327,6 +328,7 @@ export function Builder({ format, onFormatChange, date, locale, dialect }: Build
 						</div>
 					</SortableContext>
 				)}
+				{tokens.length > 0 && <PortabilityBar format={format} />}
 			</section>
 			<DragOverlay dropAnimation={null}>
 				{activeToken ? (
