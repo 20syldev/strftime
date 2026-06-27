@@ -41,6 +41,19 @@
 		"srDropped": "{item} soltada en {target}",
 		"srCanceled": "Reordenación cancelada"
 	},
+	"codegen": {
+		"title": "Usar en código",
+		"description": "Fragmentos del formato actual listos para pegar, en varios lenguajes.",
+		"copy": "Copiar",
+		"copied": "Fragmento de {lang} copiado",
+		"close": "Cerrar",
+		"caveats": {
+			"unsupported": "{codes} no se admite aquí.",
+			"flagsIgnored": "Python ignora los indicadores y el ancho en {codes}.",
+			"glibcExtension": "Los indicadores y el ancho de {codes} son extensiones de glibc, no estándar en C.",
+			"unmapped": "Sin equivalente directo para {codes}: se deja igual, ajústalo manualmente."
+		}
+	},
 	"chip": {
 		"value": "Valor actual",
 		"padding": "Relleno",

@@ -41,6 +41,19 @@
 		"srDropped": "{item} dropped on {target}",
 		"srCanceled": "Reordering canceled"
 	},
+	"codegen": {
+		"title": "Use in code",
+		"description": "Ready-to-paste snippets of the current format for several languages.",
+		"copy": "Copy",
+		"copied": "{lang} snippet copied",
+		"close": "Close",
+		"caveats": {
+			"unsupported": "{codes} not supported here.",
+			"flagsIgnored": "Python ignores flags and width on {codes}.",
+			"glibcExtension": "{codes} flags and width are glibc extensions, not standard C.",
+			"unmapped": "No direct equivalent for {codes} — left in place, adjust manually."
+		}
+	},
 	"chip": {
 		"value": "Current value",
 		"padding": "Padding",

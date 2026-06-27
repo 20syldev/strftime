@@ -41,6 +41,19 @@
 		"srDropped": "{item} déposé sur {target}",
 		"srCanceled": "Réorganisation annulée"
 	},
+	"codegen": {
+		"title": "Utiliser dans le code",
+		"description": "Extraits du format courant prêts à coller, pour plusieurs langages.",
+		"copy": "Copier",
+		"copied": "Extrait {lang} copié",
+		"close": "Fermer",
+		"caveats": {
+			"unsupported": "{codes} non pris en charge ici.",
+			"flagsIgnored": "Python ignore les drapeaux et la largeur sur {codes}.",
+			"glibcExtension": "Les drapeaux et la largeur de {codes} sont des extensions glibc, non standard en C.",
+			"unmapped": "Pas d'équivalent direct pour {codes} — laissé tel quel, à ajuster manuellement."
+		}
+	},
 	"chip": {
 		"value": "Valeur actuelle",
 		"padding": "Remplissage",
