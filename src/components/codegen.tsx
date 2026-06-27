@@ -49,12 +49,15 @@ export function CodeExport({ format }: CodeExportProps) {
 				</TooltipTrigger>
 				<TooltipContent>{t("title")}</TooltipContent>
 			</Tooltip>
-			<DialogContent className="sm:max-w-2xl" closeLabel={t("close")}>
+			<DialogContent
+				className="max-h-[85vh] overflow-y-auto p-4 sm:max-w-2xl sm:p-6"
+				closeLabel={t("close")}
+			>
 				<DialogHeader>
 					<DialogTitle>{t("title")}</DialogTitle>
 					<DialogDescription>{t("description")}</DialogDescription>
 				</DialogHeader>
-				<Tabs defaultValue={snippets[0]?.id} className="gap-3">
+				<Tabs defaultValue={snippets[0]?.id} className="min-w-0 gap-3">
 					<TabsList className="flex h-auto w-full flex-wrap">
 						{snippets.map((snippet) => (
 							<TabsTrigger key={snippet.id} value={snippet.id}>
@@ -66,10 +69,10 @@ export function CodeExport({ format }: CodeExportProps) {
 						<TabsContent
 							key={snippet.id}
 							value={snippet.id}
-							className="flex flex-col gap-3"
+							className="flex min-w-0 flex-col gap-3"
 						>
-							<div className="relative">
-								<pre className="overflow-x-auto rounded-lg border-2 bg-muted p-4 pr-14 font-mono text-sm">
+							<div className="relative min-w-0">
+								<pre className="max-w-full overflow-x-auto rounded-lg border-2 bg-muted p-4 pr-14 font-mono text-sm">
 									<code>{snippet.code || " "}</code>
 								</pre>
 								<Button
