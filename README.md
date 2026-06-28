@@ -9,8 +9,12 @@ Interactive `strftime` format builder — a homemade engine, plain-language expl
 - Live preview: real-time clock or custom date, selectable render locale (C/POSIX, browser, fifteen locales), copy the format, the result or a shareable link (`?f=`).
 - Palette of the 48 directives by category, filterable by dialect (C / glibc, Python, Ruby), full-text search and command palette (Ctrl K).
 - Full reference: live output, explanations, ranges, compatibility badges, flags and width, presets (ISO 8601, RFC 2822, epoch...).
+- Detect from example: paste a sample date (ISO, RFC 2822, US / EU, localized month and weekday names) to infer its format and load it into the builder, with a day / month order toggle for ambiguous cases.
+- Use in code: ready-to-paste snippets of the current format for Python, Ruby, Shell, C, Go and JavaScript, each with its own portability caveats.
+- Portability linter: per-piece chip warnings and a per-format summary whenever a directive, flag, width or modifier isn't portable across C / glibc, Python and Ruby.
+- Saved formats: a personal `localStorage` library of named formats with rename, delete (with undo) and JSON import / export, alongside the fixed presets.
 - Pure TypeScript `strftime` engine (`src/lib/strftime.ts`): glibc dialect plus Ruby (`%L`, `%N`, `%v`, `%+`, `%::z`) and Python (`%f`) extensions, wired C locale and locales through `Intl`, verified byte for byte against the `date` command (glibc) across several time zones.
-- English / French i18n (next-intl, `/en/` and `/fr/` routes), light / dark theme (next-themes), neo-brutalist design driven solely by the tokens in `globals.css`, arcade loader and custom scrollbar.
+- English / French / Spanish i18n (next-intl, served at `/`, `/fr/` and `/es/`), light / dark theme (next-themes), neo-brutalist design driven solely by the tokens in `globals.css`, arcade loader and custom scrollbar.
 
 ## Stack
 
@@ -29,15 +33,15 @@ Next.js 16 (App Router, static export), React 19, strict TypeScript, Tailwind CS
 ## Structure
 
 ```
-messages/            i18n messages (en.json, fr.json)
+messages/            i18n messages (en.json, fr.json, es.json)
 src/app/(en)/        Root layout + page for the default locale, served at /
 src/app/(fr)/fr/     Root layout + page for the French locale, served at /fr
 src/components/      Feature components (builder, chip, preview, shell, palette...)
 src/components/ui/   Generated shadcn/ui components
 src/data/            Directive catalog and presets
-src/hooks/           useNow (hydration-safe clock)
+src/hooks/           useNow (hydration-safe clock), useSavedFormats (localStorage library)
 src/i18n/            next-intl routing and request
-src/lib/             strftime engine, metadata, utilities
+src/lib/             strftime engine, code generation, portability, format detection, metadata, utilities
 ```
 
 ## Notes
