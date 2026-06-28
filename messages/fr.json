@@ -126,6 +126,26 @@
 			"epoch": "Epoch Unix"
 		}
 	},
+	"library": {
+		"title": "Formats enregistrés",
+		"saveCurrent": "Enregistrer le format actuel",
+		"namePlaceholder": "Nommer ce format",
+		"save": "Enregistrer",
+		"rename": "Renommer",
+		"renameTitle": "Renommer le format",
+		"delete": "Supprimer",
+		"undo": "Annuler",
+		"load": "Charger {name}",
+		"export": "Exporter",
+		"import": "Importer",
+		"close": "Fermer",
+		"empty": "Aucun format enregistré. Enregistrez le format actuel pour démarrer votre bibliothèque.",
+		"saved": "Format enregistré",
+		"renamed": "Format renommé",
+		"deleted": "Format supprimé",
+		"imported": "{count, plural, one {# format importé} other {# formats importés}}",
+		"importError": "Impossible d'importer ce fichier"
+	},
 	"reference": {
 		"title": "Référence",
 		"subtitle": "Chaque directive, sa sortie en direct pour la date d'aperçu, et où elle fonctionne.",

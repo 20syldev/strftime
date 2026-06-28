@@ -126,6 +126,26 @@
 			"epoch": "Época Unix"
 		}
 	},
+	"library": {
+		"title": "Formatos guardados",
+		"saveCurrent": "Guardar el actual",
+		"namePlaceholder": "Nombra este formato",
+		"save": "Guardar",
+		"rename": "Renombrar",
+		"renameTitle": "Renombrar formato",
+		"delete": "Eliminar",
+		"undo": "Deshacer",
+		"load": "Cargar {name}",
+		"export": "Exportar",
+		"import": "Importar",
+		"close": "Cerrar",
+		"empty": "Aún no hay formatos guardados. Guarda el actual para empezar tu biblioteca.",
+		"saved": "Formato guardado",
+		"renamed": "Formato renombrado",
+		"deleted": "Formato eliminado",
+		"imported": "{count, plural, one {# formato importado} other {# formatos importados}}",
+		"importError": "No se pudo importar ese archivo"
+	},
 	"reference": {
 		"title": "Referencia",
 		"subtitle": "Cada directiva, su salida en vivo para la fecha de la vista previa y dónde funciona.",

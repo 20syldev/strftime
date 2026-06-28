@@ -126,6 +126,26 @@
 			"epoch": "Unix epoch"
 		}
 	},
+	"library": {
+		"title": "Saved formats",
+		"saveCurrent": "Save current",
+		"namePlaceholder": "Name this format",
+		"save": "Save",
+		"rename": "Rename",
+		"renameTitle": "Rename format",
+		"delete": "Delete",
+		"undo": "Undo",
+		"load": "Load {name}",
+		"export": "Export",
+		"import": "Import",
+		"close": "Close",
+		"empty": "No saved formats yet. Save the current one to start your library.",
+		"saved": "Format saved",
+		"renamed": "Format renamed",
+		"deleted": "Format deleted",
+		"imported": "{count, plural, one {# format imported} other {# formats imported}}",
+		"importError": "That file could not be imported"
+	},
 	"reference": {
 		"title": "Reference",
 		"subtitle": "Every directive, its live output for the preview date, and where it works.",
