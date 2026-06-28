@@ -7,6 +7,7 @@ import { Builder } from "@/components/builder";
 import { CommandMenu } from "@/components/command";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Library } from "@/components/library";
 import { ArcadeLoader } from "@/components/loader";
 import { Palette } from "@/components/palette";
 import { Presets } from "@/components/presets";
@@ -112,6 +113,7 @@ export function Studio() {
 								onPauseChange={setUiPaused}
 							/>
 							<Presets format={format} onSelect={setFormat} />
+							<Library format={format} onSelect={setFormat} />
 						</div>
 						<Palette
 							onInsert={insert}
