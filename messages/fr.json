@@ -146,6 +146,18 @@
 		"imported": "{count, plural, one {# format importé} other {# formats importés}}",
 		"importError": "Impossible d'importer ce fichier"
 	},
+	"detect": {
+		"trigger": "Détecter depuis un exemple",
+		"title": "Détecter depuis un exemple",
+		"description": "Collez une date d'exemple et nous déduisons son format strftime.",
+		"placeholder": "lun. 15 mars 2024 14:30",
+		"ambiguous": "Date ambiguë — choisissez l'ordre du jour et du mois.",
+		"mdy": "Mois / Jour",
+		"dmy": "Jour / Mois",
+		"apply": "Charger dans l'éditeur",
+		"notDetected": "Impossible de déduire un format. Essayez une date ISO, RFC 2822, ou avec un nom de mois.",
+		"lowConfidence": "Confiance faible — vérifiez le résultat avant de l'utiliser."
+	},
 	"reference": {
 		"title": "Référence",
 		"subtitle": "Chaque directive, sa sortie en direct pour la date d'aperçu, et où elle fonctionne.",

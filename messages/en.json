@@ -146,6 +146,18 @@
 		"imported": "{count, plural, one {# format imported} other {# formats imported}}",
 		"importError": "That file could not be imported"
 	},
+	"detect": {
+		"trigger": "Detect from example",
+		"title": "Detect from example",
+		"description": "Paste an example date and we'll infer its strftime format.",
+		"placeholder": "Mon, 15 Mar 2024 14:30",
+		"ambiguous": "Ambiguous date — choose how to read the day and month.",
+		"mdy": "Month / Day",
+		"dmy": "Day / Month",
+		"apply": "Load into builder",
+		"notDetected": "Couldn't infer a format from that. Try an ISO, RFC 2822, or a date with a month name.",
+		"lowConfidence": "Low confidence — double-check the result before using it."
+	},
 	"reference": {
 		"title": "Reference",
 		"subtitle": "Every directive, its live output for the preview date, and where it works.",

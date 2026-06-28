@@ -146,6 +146,18 @@
 		"imported": "{count, plural, one {# formato importado} other {# formatos importados}}",
 		"importError": "No se pudo importar ese archivo"
 	},
+	"detect": {
+		"trigger": "Detectar desde un ejemplo",
+		"title": "Detectar desde un ejemplo",
+		"description": "Pega una fecha de ejemplo y deduciremos su formato strftime.",
+		"placeholder": "lun, 15 mar 2024 14:30",
+		"ambiguous": "Fecha ambigua — elige el orden del día y el mes.",
+		"mdy": "Mes / Día",
+		"dmy": "Día / Mes",
+		"apply": "Cargar en el editor",
+		"notDetected": "No se pudo deducir un formato. Prueba una fecha ISO, RFC 2822 o con un nombre de mes.",
+		"lowConfidence": "Confianza baja — verifica el resultado antes de usarlo."
+	},
 	"reference": {
 		"title": "Referencia",
 		"subtitle": "Cada directiva, su salida en vivo para la fecha de la vista previa y dónde funciona.",
