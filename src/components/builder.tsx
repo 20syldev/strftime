@@ -26,6 +26,7 @@ import { toast } from "sonner";
 
 import { DROP_COPY, DROP_TRASH, OverlayChip, SortableChip } from "@/components/chip";
 import { CodeExport } from "@/components/codegen";
+import { Detect } from "@/components/detect";
 import { PortabilityBar } from "@/components/portability";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -283,6 +284,7 @@ export function Builder({ format, onFormatChange, date, locale, dialect }: Build
 								</Tooltip>
 							);
 						})}
+						<Detect onFormatChange={onFormatChange} date={date} locale={locale} />
 						<CodeExport format={format} />
 					</div>
 				</div>
